@@ -24,7 +24,8 @@ class RuleBaseCreator {
 
             while ((line = bufferedReader.readLine()) != null) {
                 String[] values = line.split(";");
-                //Rule rule = createRule();
+                Rule rule = createRule(headers, values);
+                result.add(rule);
 
             }
         } catch (FileNotFoundException e) {
