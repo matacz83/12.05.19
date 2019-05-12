@@ -1,5 +1,7 @@
 package pl.sda;
 
+import pl.sda.Utils.SDACreditCardUtils;
+import pl.sda.Utils.ValidationResult;
 import pl.sda.issuers.IssuerDetector;
 import pl.sda.verifiers.LuhnVerifier;
 
@@ -9,12 +11,10 @@ public class App
     {
         String cardNumber = "373584610377212";
 
-        IssuerDetector issuerDetector = new IssuerDetector();
-        String issuer = issuerDetector.detect(cardNumber);
+        SDACreditCardUtils sdaCreditCardUtils = new SDACreditCardUtils();
 
-        LuhnVerifier verifier = new LuhnVerifier();
-        boolean verify = verifier.verify(cardNumber);
+        ValidationResult validationResult = sdaCreditCardUtils.validate(cardNumber);
 
-        System.out.println("Karta o numerze: " + cardNumber + " została wydana przez: " + issuer + " ( " + verify + " ) ");
+        System.out.println("Karta o numerze: " + cardNumber + " została wydana przez: " + validationResult.getName() + " ( " + validationResult.isChecksumValidation() + " ) ");
     }
 }
