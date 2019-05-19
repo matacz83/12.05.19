@@ -1,0 +1,2 @@
+# credit-card-verifier
+Algorytm Luhna - Zaprogramuj   aplikację,   która   zidentyfikuje   wystawcę   karty  oraz   dokona   sprawdzenia poprawności numeru przy wykorzystaniu algorytmu. Wymagane:- uzycie Mavena,- program umożliwia załadowanie danych o wystawcach/prefiksach z pliku - metody sprawdzające wystawcę i poprawność numeru karty są testowane jednostkowo.Mile widziane:- TDD,- wzorce projektowe.
